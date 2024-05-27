@@ -2,9 +2,24 @@
 <html>
 <head>
     <title>Webcam Access</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #webcam {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+    <video id="webcam" autoplay playsinline></video>
     <script>
         if (navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true })
@@ -16,6 +31,5 @@
                 });
         }
     </script>
-    Webcam
 </body>
 </html>
